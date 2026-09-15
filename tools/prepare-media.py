@@ -28,7 +28,6 @@ FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
 
 PHOTOS = {
     'profile-picture-v2': 'misc/Profile_pic_v2.png',
-    'shop-candid': 'misc/Shop_Candid.HEIC',
     'capsule-deployed-v2': 'Capsule/capsule_deployed.HEIC',
     'capsule-packaged': 'Capsule/capsule_packaged.png',
     'capsule-diagram': 'Capsule/capsule_use_diagram.png',

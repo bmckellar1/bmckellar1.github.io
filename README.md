@@ -115,5 +115,3 @@ Change the variables at the top of `src/styles.css` to adjust the color scheme.
 Run `node --test tools/project-content.test.mjs` to check content compatibility and chapter anchors.
 
 The layout combines a portrait, biography, contact details, and an Explore projects link in one white introduction panel. Rounded project cards, sans-serif headings, and compact navigation give the site a modern format. Project pages use separate chapter panels and a sticky contents menu on desktop. Entry animations, scroll reveals, and hover effects respect the system's reduced-motion setting. Cross-page fades enhance navigation in browsers that support CSS view transitions; ordinary links work everywhere.
-
-Palette notes are recorded in `tools/hardwood-design.md`.
