@@ -25,6 +25,33 @@ npm run preview
 
 The build automatically creates a real `index.html` for each project directory, so direct links and refreshes work on a static host that serves directory index files. Upload the contents of `dist/` to the root of your static site. No backend or SPA rewrite rule is required for the project URLs.
 
+## Publish to GitHub Pages
+
+The live site is https://bmckellar1.github.io/. The repository's default branch is `master`.
+GitHub Pages uses **GitHub Actions** as its publishing source. The workflow in
+`.github/workflows/deploy.yml` tests and builds the site, then publishes only `dist/`.
+
+After editing the site, commit and push from this folder:
+
+```sh
+git add .
+git commit -m "Update portfolio"
+git push
+```
+
+Every push to `master` deploys automatically. Follow progress in the repository's
+**Actions** tab. A local `npm run build` is useful for checking changes, but is not
+required to publish. Keep `public/media/` committed; do not commit `dist/` or
+`node_modules/`. The raw photos and Python conversion tools are not deployed.
+
+The `bmckellar1.github.io` repository serves the site at the domain root, so the
+existing root-relative links and Vite's default base `/` work as configured.
+You can also use a domain you own: configure it in **Settings → Pages → Custom
+domain**, then follow GitHub's DNS and domain verification instructions. A custom
+domain serving this site at its root needs no application path changes.
+Moving to a different repository's `/repository-name/` URL would require updating
+the Vite base, navigation, media paths, and project routing together.
+
 ## Edit the content
 
 All text and project definitions live in `src/content.js`.
