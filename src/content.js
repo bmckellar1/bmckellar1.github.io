@@ -80,6 +80,7 @@ export const projects = [
     imageSize: [720, 1280],
     imageAlt: 'Baloo holding a cardboard box in the robotics workshop',
     imagePosition: '50% 49%',
+    developmentNote: 'This page is still under development. All available project media and working notes are shown below.',
     lead: 'Bringing a robotic mechanism into the physical world.',
     overview: 'Baloo brings a robot’s frame, articulated arms, and handling task together in one physical assembly. The workshop demonstration captures the platform holding a box and gives a first look at the mechanism in use.',
     topics: ['Robotic mechanisms', 'Physical integration', 'Demonstration'],
@@ -147,7 +148,7 @@ export const projects = [
             poster: '/media/turbine-machining.webp',
             caption: 'Machining the turbine frame on a Haas VF-4 four-axis mill.',
           }]},
-          {paragraphs: ["The clear resin housing proved to be a lot more complex. Our lab has Formlabs Form 4 resin printers with clear resin, but we had never achieved transparent prints before. After some research and experimentation, I developed a procedure for creating reliably transparent prints by cleaning each part thouroughly and applying an automotive clear coat."]},
+          {paragraphs: ["The clear resin housing proved to be a lot more complex. Our lab has Formlabs Form 4 resin printers with clear resin, but we had never achieved transparent prints before. After some research and experimentation, I developed a procedure for creating reliably transparent prints by cleaning each part thoroughly and applying an automotive clear coat."]},
           {media: [{type: 'photo',
             src: '/media/turbine-clear-print-demo.mp4',
             poster: '/media/turbine-clear-print-demo.webp',
@@ -167,7 +168,13 @@ export const projects = [
           { paragraphs: ["The turbine achieved a maximum speed of 45,000 rpm and a tangential blade velocity of 400 mph. The next steps for this project are identifying the source of the sound (which sounds enough like an air-raid siren to scare our neighbors) and hopefully achieving a higher top speed."]}
         ]
       },
-      {}
+      { 
+        id: 'reflection',
+        title: 'Reflection',
+        content: [
+          {paragraphs: ["This project was the first engineering project I ever undertook. When I started I didn't know to use SolidWorks or program multi-axis toolpaths. I didn't even know about McMaster! This project took a lot longer than I expected. I look at this simple device and remember  "]}
+        ]
+      }
     ],
   },
   {
@@ -179,6 +186,7 @@ export const projects = [
     imageSize: [1800, 1350],
     imageAlt: 'Assembled wheeled robot with sensors, wiring, and an SF-1 circuit board on the workbench',
     imagePosition: '50% 63%',
+    developmentNote: 'This page is still under development. All available project media and working notes are shown below.',
     lead: 'Mechanical structure meets custom electronics.',
     overview: 'This build brings a wheeled chassis, sensor mounts, wiring, and a custom circuit board into one mobile platform. The two photographs document the board on its own and the assembled robot on the workbench.',
     topics: ['Mobile robotics', 'Custom PCB', 'System integration'],

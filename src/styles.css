@@ -95,6 +95,9 @@ h1, h2, h3, p, figure { margin-top: 0; }
 
 /* Each project uses a broad image, compact contents, and separate chapters. */
 .back-link { margin-top: 10px; color: var(--muted); }
+.development-note { display: flex; align-items: baseline; gap: 18px; margin-top: 18px; padding: 15px 18px; border: 1px solid #c8b49f; border-radius: 12px; background: var(--feature); }
+.development-note .eyebrow { flex-shrink: 0; margin: 0; }
+.development-note p { margin: 0; color: var(--ink); font-size: 13px; line-height: 1.7; }
 .project-heading { display: grid; grid-template-columns: 1.15fr 1fr; grid-template-areas: 'category lead' 'title lead' 'topics topics'; column-gap: 65px; padding: 28px 0 34px; }
 .project-heading > .eyebrow { grid-area: category; margin-bottom: 12px; }
 .project-heading h1 { grid-area: title; margin: 0; font-size: clamp(42px, 5.5vw, 68px); line-height: 1.08; font-weight: 600; letter-spacing: -2.7px; }
@@ -212,6 +215,7 @@ h1, h2, h3, p, figure { margin-top: 0; }
   .nav-links { padding: 4px; }
   .nav-links a { min-height: 40px; padding-inline: 18px; }
   .site-header-compact { gap: 16px; padding-top: 25px; }
+  .development-note { align-items: flex-start; flex-direction: column; gap: 4px; padding: 14px 15px; }
   .profile-section { grid-template-columns: 1fr; gap: 0; margin-top: 0; border-radius: 22px; padding: 11px; }
   .portrait { height: 340px; border-radius: 12px; }
   .profile-copy { padding: 29px 15px 17px; }

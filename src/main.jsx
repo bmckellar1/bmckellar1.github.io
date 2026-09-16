@@ -130,6 +130,12 @@ function ProjectPage({ project }) {
       <Header />
       <main className="project-page" id="main" tabIndex={-1}>
         <a className="back-link text-link" href="/#work"><ArrowLeft size={15} /> All projects</a>
+        {project.developmentNote && (
+          <aside className="development-note" aria-label="Page status" data-enter>
+            <span className="eyebrow">Page status</span>
+            <p>{project.developmentNote}</p>
+          </aside>
+        )}
         <header className="project-heading" data-enter>
           <p className="eyebrow">{project.category}</p>
           <h1>{project.title}</h1>
