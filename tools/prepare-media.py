@@ -40,6 +40,7 @@ VIDEOS = {
     'turbine-machining': 'Tesla_turbine/Tesla_Turbine_4_axis.MOV',
     'turbine-demo': 'Tesla_turbine/Tesla_Turbine_demo.MOV',
     'turbine-idling': 'Tesla_turbine/Tesla_turbine_idleing.MOV',
+    'turbine-blade-demo': 'Tesla_turbine/Turbine-blade-demo.mov',
 }
 
 parser = argparse.ArgumentParser(description=__doc__)

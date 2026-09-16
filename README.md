@@ -61,7 +61,7 @@ All text and project definitions live in `src/content.js`.
 - `profile.about`: the separate personal statement below that heading. Newlines are preserved.
 - `profile.aboutDraft`: your unfinished personal statement, preserved for you to complete. This field is not displayed.
 - `profile.photo` / `photoAlt`: the profile portrait and its description.
-- `profile.email` / `phone` / `links`: email, a clickable phone number, and optional professional links. A placeholder appears when all contact details are empty.
+- `profile.email` / `links`: email and optional professional links, including the resume. A placeholder appears when both are empty.
 - Project `summary` / `image` / `imageAlt`: homepage tile content.
 - `imagePosition` / `imageFit`: optional thumbnail framing controls.
 - `photoSize`, `imageSize`, and image media `size`: original `[width, height]` in pixels; these reserve image space while loading.
@@ -95,7 +95,7 @@ Repeat paragraph or media groups as often as needed. Do not repeat a `paragraphs
 
 The phrases `in vitro` and `in vivo` are automatically italicized in project paragraphs. Capitalization stays as written; use lowercase within a sentence.
 
-Existing sections with `paragraphs` and `media` directly on the section still work, displaying text followed by media. When a `content` list is present, it defines the entire section body. For a text-only overview, use `overview: ['First paragraph.', 'Second paragraph.']`.
+Every project chapter now uses a `content` list, so the same paragraph and media ordering shown above works in Capsule, Baloo, Tesla Turbine, and Mechatronics. Existing sections with `paragraphs` and `media` directly on the section are still supported for compatibility, but use `content` for new writing. For a text-only overview, use `overview: ['First paragraph.', 'Second paragraph.']`.
 
 For a video, use `type: 'video'`, an MP4 `src`, a `poster` image, and a `caption`. Set `portrait: true` for vertical footage. Still images can be opened at full size using the image link. Use `fit: 'contain'` for diagrams.
 
@@ -121,7 +121,7 @@ python tools/prepare-media.py
 These Python tools are only needed for media preparation, not to run or build the site. The converter preserves originals and refreshes web copies when their source files are newer. To force a refresh after editing selected media, use their names from the conversion map:
 
 ```sh
-python tools/prepare-media.py --only capsule-deployed-v2 turbine-glamour turbine-idling --force
+python tools/prepare-media.py --only capsule-deployed-v2 turbine-glamour turbine-idling turbine-blade-demo --force
 ```
 
 Update the dimensions in `src/content.js` if an image's crop or size changes. The turbine glamour photo is used for both its project card and page cover; its idling video appears in the bench section. The edited Capsule close-up uses `capsule-deployed-v2.webp` so browsers load the new version.

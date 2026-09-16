@@ -48,10 +48,10 @@ export const projects = [
       {
         id: 'assembly',
         title: 'Assembly',
-        paragraphs: ["When I joined the project, we had a handful of validated components but no procedure for assembly. My first task was to develop a system to build functioning capsules every time. After a few iterations and the addition of new assembly tools, capsule manufacturing yield jumped from approximately 40% to over 90%."
+        content: [
+          { paragraphs: ["When I joined the project, we had a handful of validated components but no procedure for assembly. My first task was to develop a system to build functioning capsules every time. After a few iterations and the addition of new assembly tools, capsule manufacturing yield jumped from approximately 40% to over 90%."] },
+          { media: [{ type: 'image', src: '/media/capsule-deployed-v2.webp', size: [1735, 1306], alt: 'White anchor component and dark capsule housing laid out on a wooden workbench', caption: 'Freshly assembled capsule components, ready for packing and testing.' }] },
         ],
-        media: [{ type: 'image', src: '/media/capsule-deployed-v2.webp', size: [1735, 1306], alt: 'White anchor component and dark capsule housing laid out on a wooden workbench', caption: 'Freshly assembled capsule components, ready for packing and testing.' }],
-
       },
       {
         id: 'experiment-design',
@@ -65,9 +65,9 @@ export const projects = [
       {
         id: "the-future",
         title: "What's next?",
-        content: 
-        {paragraphs: ["Now that we've proved these components can work together, we are developing an in vivo test in pigs. Stay tuned!"],
-        },
+        content: [
+          { paragraphs: ["Now that we've proved these components can work together, we are developing an in vivo test in pigs. Stay tuned!"] },
+        ],
       }
     ],
   },
@@ -89,13 +89,17 @@ export const projects = [
       {
         id: 'assembly',
         title: 'The physical assembly',
-        paragraphs: ['The platform combines a central frame with two articulated arms and a gripper at the end of each arm. The exposed structure makes the relationship between the frame, joints, and handled object visible.', 'This is where individual mechanisms become a complete system: the assembly has to make room for motion as well as the object it is intended to handle.'],
+        content: [
+          { paragraphs: ['The platform combines a central frame with two articulated arms and a gripper at the end of each arm. The exposed structure makes the relationship between the frame, joints, and handled object visible.', 'This is where individual mechanisms become a complete system: the assembly has to make room for motion as well as the object it is intended to handle.'] },
+        ],
       },
       {
         id: 'demonstration',
         title: 'The lifting demonstration',
-        paragraphs: ['The recorded demonstration follows Baloo handling a cardboard box in the workshop. It documents the physical prototype in use and provides a reference for the movement of the arms and the position of the load.'],
-        media: [{ type: 'video', src: '/media/baloo-lifting.mp4', poster: '/media/baloo-lifting.webp', portrait: true, caption: 'Workshop footage of Baloo handling a box. Use the controls to play or pause.' }],
+        content: [
+          { paragraphs: ['The recorded demonstration follows Baloo handling a cardboard box in the workshop. It documents the physical prototype in use and provides a reference for the movement of the arms and the position of the load.'] },
+          { media: [{ type: 'video', src: '/media/baloo-lifting.mp4', poster: '/media/baloo-lifting.webp', portrait: true, caption: 'Workshop footage of Baloo handling a box. Use the controls to play or pause.' }] },
+        ],
       },
     ],
   },
@@ -103,31 +107,67 @@ export const projects = [
     id: 'tesla-turbine',
     title: 'Tesla Turbine',
     category: 'Design & manufacturing',
-    summary: 'From four-axis machining to an assembled turbine on the test bench.',
+    summary: 'Forgotten technology breaking 400 mph.',
     image: '/media/turbine-glamour.webp',
     imageSize: [1449, 1086],
     imageAlt: 'Tesla turbine with a machined metal frame and transparent circular housing on a workbench',
     imageFit: 'contain',
-    lead: 'Following a component from the mill to the workbench.',
-    overview: 'This project is documented at two stages: machining a metal component in a rotary fixture and demonstrating the assembled turbine at the workbench. Together, the recordings connect fabrication with the physical assembly in use.',
-    topics: ['Four-axis machining', 'Mechanical assembly', 'Bench demonstration'],
+    lead: 'Learning to learn, machine, iterate, and follow through.',
+    overview: "I was challenged to push the limits of our machines and build something to inspire the next generation. Here's what I made.",
+    topics: ['Multi-axis Machining', 'Additive Manufacturing', 'CAD'],
     heroCaption: 'The assembled Tesla turbine, with its machined frame and transparent housing.',
     sections: [
       {
-        id: 'machining',
-        title: 'Making the components',
-        paragraphs: ['The machining footage shows a workpiece held horizontally in a rotary fixture beneath the cutting tool. It offers a close look at the setup and the geometry being produced.', 'The fixture, tool access, and finished surfaces are all part of the manufacturing story behind the assembled project.'],
-        media: [{ type: 'video', src: '/media/turbine-machining.mp4', poster: '/media/turbine-machining.webp', caption: 'Four-axis machining footage from the fabrication process.' }],
-      },
-      {
-        id: 'bench',
-        title: 'Taking it to the bench',
-        paragraphs: ['The second recording moves from the machine to the assembled turbine. The unit is secured at the workbench with a hose connected, providing a view of the assembled hardware and demonstration setup.', 'The footage records this stage of the build; measured speed, operating conditions, and performance results can be documented alongside it as the project notes develop.'],
-        media: [
-          { type: 'video', src: '/media/turbine-demo.mp4', poster: '/media/turbine-demo.webp', portrait: true, caption: 'The assembled turbine and its workshop demonstration setup.' },
-          { type: 'video', src: '/media/turbine-idling.mp4', poster: '/media/turbine-idling.webp', caption: 'The Tesla turbine idling on the workbench.' },
+        id: 'challenge',
+        title: 'The Challenge',
+        content: [
+          { paragraphs: ["As a lab assistant in the BYU Prototyping Lab, part of my job was to create demos for high school students and freshmen. I decided to design and fabricate a Tesla turbine and completed it while working part-time over the course of a summer."] },
+          { media: [{ type: 'video', src: '/media/turbine-idling.mp4', poster: '/media/turbine-idling.webp', caption: 'Idling Tesla turbine.' }] },
+          { paragraphs: [] }, // Add more Challenge paragraphs here.
         ],
       },
+      {
+        id: 'what-is',
+        title: 'What is a Tesla Turbine?',
+        content: [
+          { paragraphs: ["The Tesla turbine is a little-known invention by Nikola Tesla. Unlike contemporary and modern turbines, this turbine was designed to achieve laminar flow with the agitating fluid. It does so with flat blades oriented parallel to the direction of flow. Although the turbine can't generate much torque, it advertises an incredibly high theoretical efficiency of more than 90%."] },
+          { media: [
+            { type: 'video', src: '/media/turbine-blade-demo.mp4', poster: '/media/turbine-blade-demo.webp', caption: 'Demonstration of blade interaction with the agitating fluid, provided by a compressed-air gun.' },
+          ] },
+          { paragraphs: ["I decided to keep my design simple and elegant. I wanted to demonstrate the ability of our multi-axis CNC machines on the frame and see if I could fabricate a clear housing on our resin SLA printers to allow students to see the internal mechanism."] },
+        ],
+      },
+      {
+        id: 'manufacturing',
+        title: 'Manufacturing',
+        content: [
+          { paragraphs: ["After a few weeks of designing the turbine in SolidWorks and playing with some proofs of concept, I was ready to start building. I programmed our Haas CNC machines using Mastercam and ran the part on our four-axis mill."] },
+          { media: [{type: 'video',
+            src: '/media/turbine-machining.mp4',
+            poster: '/media/turbine-machining.webp',
+            caption: 'Machining the turbine frame on a Haas VF-4 four-axis mill.',
+          }]},
+          {paragraphs: ["The clear resin housing proved to be a lot more complex. Our lab has Formlabs Form 4 resin printers with clear resin, but we had never achieved transparent prints before. After some research and experimentation, I developed a procedure for creating reliably transparent prints by cleaning each part thouroughly and applying an automotive clear coat."]},
+          {media: [{type: 'photo',
+            src: '/media/turbine-clear-print-demo.mp4',
+            poster: '/media/turbine-clear-print-demo.webp',
+            caption: "Samples used to develop the clear resin printing procedure.",
+          }]},
+          {paragraphs: ["With my fabricated parts and some hardware from McMaster, I was ready to test."]}
+        ],
+      },
+      {
+        id: 'testing',
+        title: 'Testing',
+        content: [
+          { paragraphs: ["The turbine was tested by connecting the device to a compressed-air supply and slowly throttling it up while measuring blade speed with a stroboscope."]},
+          { media: [
+            { type: 'video', src: '/media/turbine-demo.mp4', poster: '/media/turbine-demo.webp', caption: 'Testing the Tesla turbine.' },
+          ]},
+          { paragraphs: ["The turbine achieved a maximum speed of 45,000 rpm and a tangential blade velocity of 400 mph. The next steps for this project are identifying the source of the sound (which sounds enough like an air-raid siren to scare our neighbors) and hopefully achieving a higher top speed."]}
+        ]
+      },
+      {}
     ],
   },
   {
@@ -147,14 +187,18 @@ export const projects = [
       {
         id: 'electronics',
         title: 'A board for the platform',
-        paragraphs: ['The custom SF-1 board lays out connections for motor control, sensors, and power. Its shape and connector positions show how the electronics are organized around the needs of the robot.', 'The unpopulated board is a useful view of the design before the wiring and installed components make the connections harder to follow.'],
-        media: [{ type: 'image', src: '/media/mechatronics-pcb.webp', size: [1800, 1350], alt: 'Unpopulated SF-1 custom circuit board with labeled motor, sensor, and power connections', caption: 'The custom SF-1 circuit board before assembly.' }],
+        content: [
+          { paragraphs: ['The custom SF-1 board lays out connections for motor control, sensors, and power. Its shape and connector positions show how the electronics are organized around the needs of the robot.', 'The unpopulated board is a useful view of the design before the wiring and installed components make the connections harder to follow.'] },
+          { media: [{ type: 'image', src: '/media/mechatronics-pcb.webp', size: [1800, 1350], alt: 'Unpopulated SF-1 custom circuit board with labeled motor, sensor, and power connections', caption: 'The custom SF-1 circuit board before assembly.' }] },
+        ],
       },
       {
         id: 'integration',
         title: 'Putting the system together',
-        paragraphs: ['On the assembled platform, the board sits above the chassis between the wheels and sensor mounts. The photograph shows the physical work of integration: routing wires, positioning components, and accommodating the electronics within the mechanical structure.', 'Viewing the board and robot together connects the electrical layout to the hardware it supports.'],
-        media: [{ type: 'image', src: '/media/mechatronics-robot.webp', size: [1800, 1350], alt: 'Close view of the integrated wheeled robot and its electronics', caption: 'Mechanical and electronic components brought together on the robot.' }],
+        content: [
+          { paragraphs: ['On the assembled platform, the board sits above the chassis between the wheels and sensor mounts. The photograph shows the physical work of integration: routing wires, positioning components, and accommodating the electronics within the mechanical structure.', 'Viewing the board and robot together connects the electrical layout to the hardware it supports.'] },
+          { media: [{ type: 'image', src: '/media/mechatronics-robot.webp', size: [1800, 1350], alt: 'Close view of the integrated wheeled robot and its electronics', caption: 'Mechanical and electronic components brought together on the robot.' }] },
+        ],
       },
     ],
   },

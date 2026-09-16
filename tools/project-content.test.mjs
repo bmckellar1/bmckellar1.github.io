@@ -38,3 +38,13 @@ test('chapter anchors are unique, valid, and do not collide with overview', () =
     for (const id of ids) assert.match(id, /^[a-z0-9-]+$/);
   }
 });
+
+test('every project chapter uses ordered content groups', () => {
+  for (const project of projects) {
+    for (const section of project.sections) {
+      assert.ok(Array.isArray(section.content), `${project.title} / ${section.title} uses a content list`);
+      assert.equal(Object.hasOwn(section, 'paragraphs'), false, `${project.title} / ${section.title} has no legacy paragraphs`);
+      assert.equal(Object.hasOwn(section, 'media'), false, `${project.title} / ${section.title} has no legacy media`);
+    }
+  }
+});
