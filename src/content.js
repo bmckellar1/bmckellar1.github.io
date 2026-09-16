@@ -9,8 +9,7 @@ export const profile = {
   aboutTitle: 'Building a better future in healthcare.',
   about: "I believe the future of healthcare is something we build by creating technologies that help people thrive.",
   email: 'bradmckellar1@gmail.com',
-  phone: '801-821-7365',
-  links: [], // e.g. { label: 'LinkedIn', url: 'https://www.linkedin.com/in/your-profile/' }
+  links: [{ label: 'Resume', url: '/Brad-McKellar-Resume.pdf' }],
 };
 
 // Initial stories describe the supplied media. Add your role, decisions, and
